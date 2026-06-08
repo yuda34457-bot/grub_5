@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources\TestResults\Tables;
 
-use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Actions\EditAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -41,7 +41,7 @@ class TestResultsTable
                 EditAction::make(),
             ])
             ->toolbarActions([
-                \Filament\Tables\Actions\BulkActionGroup::make([
+                \Filament\Actions\BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
             ]);
