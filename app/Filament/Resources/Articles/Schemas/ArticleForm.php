@@ -24,7 +24,7 @@ class ArticleForm
                 TextInput::make('slug')
                     ->required()
                     ->maxLength(255)
-                    ->unique(ignoreRecord: true),
+                    ->unique('articles', 'slug', ignoreRecord: true),
                 RichEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
