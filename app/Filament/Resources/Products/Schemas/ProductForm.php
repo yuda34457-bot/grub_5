@@ -24,7 +24,7 @@ class ProductForm
                 TextInput::make('slug')
                     ->required()
                     ->maxLength(255)
-                    ->unique('products', 'slug', ignoreRecord: true),
+                    ->unique(ignoreRecord: true),
                 Textarea::make('description')
                     ->columnSpanFull(),
                 Select::make('category')
